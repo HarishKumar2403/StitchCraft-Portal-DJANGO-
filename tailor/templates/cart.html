@@ -1,0 +1,83 @@
+{% load static %}
+{%include 'header.html'%}
+{% block content %}
+<div id="page-content">
+    <!--Page Title-->
+    <div class="page section-header text-center">
+        <div class="page-title">
+            <div class="wrapper" style="padding: 20px;">
+                <h2 class="page-width">Shopping Cart</h2>
+                <p><strong>Note:</strong> We will notify you once the price is ready.</p>
+            </div>
+          </div>
+    </div>
+    <!--End Page Title-->
+    
+    <div class="container">
+        <div class="row">
+            <div  class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">                
+                <form action="#" method="post" class="cart style2">
+                    <table>
+                        <thead  class="cart__row cart__header">
+                            <tr>
+                                <th colspan="2" class="text-left">Product</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Close</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in cart_items %}
+                            
+                            <tr   class="cart__row border-bottom line1 cart-flex border-top">
+                                <td  class="cart__image-wrapper cart-flex-item">
+                                    <a href="#"><img class="cart__image" src="/media/{{item.Product.img1}}" alt="{{item.Products.ProductName}}"></a>
+                                </td>
+                                <td class="cart__meta small--text-left cart-flex-item">
+                                    <div class="list-view-item__title" style="font-size: larger;">
+                                        <a  href=" # ">
+                                            {{ item.Product.ProductName}}</a>
+                                    </div>
+                                    
+                                    <div class="cart__meta-text" style="font-size: larger;">
+                                        {{item.Product.category}}<br>
+                                    </div>
+                                </td>
+                                <td  class="cart__price-wrapper cart-flex-item" style="text-align: center;">
+                                    <span   class="money">{{item.status}}</span>
+                                </td>
+                                <td  class="text-center small--hide">
+                                    <a  href="{% url 'remove_from_cart' item.id %}" class="btn btn--secondary cart__remove" title="Remove tem">
+                                        <i class="icon icon anm anm-times-l"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="text-left">
+                                    <a href="{% url 'product'%}" class="btn btn-secondary btn--small cart-continue">Continue shopping</a>
+                                </td>
+                                <td colspan="1" class="text-right">                                    
+                                    <a href="{%url 'cart' %}"class="btn btn-secondary btn--small cart-continue ml-2">Update Cart</a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                </table> 
+                </form>                   
+               </div>         
+        </div>
+    </div>
+    <div class="page section-header text-center">
+        <div class="page-title">
+            <div class="wrapper" style="padding: 20px;">
+                <h3 class="page-width">Please fill the sizechart to confirm your order<a href="{%url 'size_chart_form' %}"class="btn btn-secondary btn--small cart-continue ml-2">Update Size Chart</a></h3>
+                
+            </div>
+          </div>
+    </div>
+    
+</div>
+{%endblock%}
+{%include 'footer.html'%}

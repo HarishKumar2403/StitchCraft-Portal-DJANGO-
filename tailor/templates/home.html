@@ -1,0 +1,197 @@
+{%load static%}
+{%include 'header.html'%}
+<div id="page-content">
+    <!--Home slider-->
+    <div class="slideshow slideshow-wrapper pb-section">
+        <div class="home-slideshow">
+            <div class="slide slideshow--medium">
+                <div class="blur-up lazyload">
+                    <img class="blur-up lazyload" data-src="/media/products/banner3.webp" src="/media/products/banner3.webp" alt="Outfit of Today" title="Outfit of Today" />
+                    <div class="slideshow__text-wrap slideshow__overlay classic middle">
+                        <div class="slideshow__text-content classic left">
+                            <div class="container">
+                                <div class="wrap-caption left">
+                                    <h2 class="h1 mega-title slideshow__title" style="color: black;padding-left: 90px;padding-bottom: 750px;">Nostalgic Trends Reimagined</h2>
+                                   
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slideshow--medium">
+                <div class="blur-up lazyload">
+                    <img class="blur-up lazyload"  data-src="/media/products/banner2.webp" src="/media/products/banner2.webp" alt="Accessories" title="Accessories" />
+                    <div class="slideshow__text-wrap slideshow__overlay classic middle">
+                        <div class="slideshow__text-content classic left">
+                            <div class="container">
+                                <div class="wrap-caption left">
+                                    <h2 class="h1 mega-title slideshow__title" style="color:white;padding-left: 70px;padding-bottom: 750px;">Achieving Perfect Festive Look</h2>
+                                    <!-- <span class="mega-subtitle slideshow__subtitle" style="padding-top: 700px;padding-left: 270px;font-size: larger;">Flawless Fit: The Importance of Tailoring in Achieving Your Perfect Festive Look</span> -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide slideshow--medium">
+                <div class="blur-up lazyload">
+                    <img class="blur-up lazyload"  data-src="/media/products/banner4.webp" src="/media/products/banner4.webp" alt="Accessories" title="Accessories" />
+                    <div class="slideshow__text-wrap slideshow__overlay classic middle">
+                        <div class="slideshow__text-content classic left">
+                            <div class="container">
+                                <div class="wrap-caption left">
+                                    <h2 class="h1 mega-title slideshow__title" style="color:orangered; padding-left: 70px;padding-bottom: 750px;font-size:xx-large;padding-left: 120px;">The charm of a beautifully crafted salwar suit </h2>
+                                    <!-- <span class="mega-subtitle slideshow__subtitle" style="padding-top: 700px;padding-left: 270px;font-size: larger;">Flawless Fit: The Importance of Tailoring in Achieving Your Perfect Festive Look</span> -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide slideshow--medium">
+                <div class="blur-up lazyload">
+                    <img class="blur-up lazyload"  data-src="/media/products/banner1.webp" src="/media/products/banner1.webp" alt="Accessories" title="Accessories" />
+                    <div class="slideshow__text-wrap slideshow__overlay classic middle">
+                        <div class="slideshow__text-content classic left">
+                            <div class="container">
+                                <div class="wrap-caption left">
+                                    <h2 class="h1 mega-title slideshow__title" style="color:white; padding-left:70px;padding-bottom: 750px;font-size:xx-large;padding-left: 60px;">Elevate Your Look with Handcrafted Embellishments</h2>
+                                    <!-- <span class="mega-subtitle slideshow__subtitle" style="padding-top: 700px;padding-left: 270px;font-size: larger;">Flawless Fit: The Importance of Tailoring in Achieving Your Perfect Festive Look</span> -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Home slider-->
+    
+    <!--Image Banners-->
+    <div class="section imgBanners pb-0">
+        <div class="imgBnrOuter">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="section-header text-center">
+                            <h2 class="h2">SHOP BY Category</h2>
+                            <p>Shop the Nicest Deals on Best Prices in all category</p>
+                        </div>
+                        
+                    </div>
+                </div>    
+                <div class="row img-grid-banner1">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 image-banner-1">
+                        <div class="inner topright">
+                            <a href="{% url 'products_by_category' category='Blouse' %}">	
+                                   <img style="height: 665px; " data-src="/media/products/sleeveless-blouse.webp" src="/media/products/sleeveless-blouse.webp" alt="Halloween Look" title="Halloween Look" class="blur-up lazyload" />
+                                <div class="ttl">
+                                    Shop <h5>Blouse</h5>
+                                </div>
+                            </a>
+                         </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 image-banner-2">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 image-banner-3">
+                                <div class="inner topright">
+                                    <a href="{% url 'products_by_category' category='Kurta-Kurti' %}">	
+                                        <img  data-src="/media/products/anarkali-kurti.webp" src="/media/products/anarkali-kurti.webp" alt="Heeled Boots" title="Heeled Boots" class="blur-up lazyload" />
+                                        <div class="ttl">
+                                            Shop <h5>Kurti</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="inner btmleft">
+                                    <a href="{% url 'products_by_category' category='Salwar-Suit' %}">	
+                                        <img style="height: 340px; " data-src="/media/products/pallazo-salwar.webp" src="/media/products/pallazo-salwar.webp" alt="Caps" title="Caps" class="blur-up lazyload" />
+                                        <div class="ttl">
+                                            Shop  <h5>Salwar Kameez</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-4">
+                                <div class="inner center">
+                                    <a href="{% url 'products_by_category' category='Lehenga' %}">	
+                                        <img style="height: 300px; " data-src="/media/products/image1.jpg" src="/media/products/image1.jpg" alt="Sun Glasses, Shoes and more" title="Sun Glasses, Shoes and more" class="blur-up lazyload" />
+                                        <div class="ttl">
+                                            Trending Collection <h5>Lehenga</h5>
+                                        </div>
+                                    </a>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row img-grid-banner2">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-5">
+                        <div class="inner topleft">
+                            <a href="{% url 'products_by_category' category='Jacket' %}">	
+                                <img  data-src="/media/products/cape-jacket.webp" src="/media/products/cape-jacket.webp" alt="Shop Jewelry" title="Shop Jewelry" class="blur-up lazyload" />
+                                <div class="ttl">
+                                    Colorful <h5>Jacket</h5>
+                                </div>
+                            </a>
+                         </div>
+                     
+                        <div class="inner topright">
+                            <a href="{% url 'products_by_category' category='Ready-To-wear-Saree' %}">	
+                                <img style="height: 512px;" data-src="/media/products/lehenga-saree.webp" src="/media/products/lehenga-saree.webp" alt="Heeled Boots" title="Heeled Boots" class="blur-up lazyload" />
+                                <div class="ttl">
+                                    New Collection<h5>Saree</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-7 image-banner-2">
+                        <div class="inner topleft">
+                            <a href="{% url 'products_by_category' category='Dress' %}">	
+                                <img  data-src="/media/products/shirt-dress.webp" src="/media/products/shirt-dress.webp" alt="Caps" title="Caps" class="blur-up lazyload" />
+                                <div class="ttl">
+                                    Elevate Every Look <h5>Dress</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6 image-banner-3">
+                                <div class="inner topright">
+                                    <a href="{% url 'products_by_category' category='Shirt' %}">	
+                                        <img style="height: 300px;"  data-src="/media/products/over-sized-shirt.webp" src="/media/products/over-sized-shirt.webp" alt="Heeled Boots" title="Heeled Boots" class="blur-up lazyload" />
+                                        <div class="ttl">
+                                            Shop <h5>Shirt</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="inner btmleft">
+                                    <a href="{% url 'products_by_category' category='Jumpsuit' %}">	
+                                        <img style="height: 300px; " data-src="/media/products/romper-jumpsuit.webp" src="/media/products/romper-jumpsuit.webp" alt="Caps" title="Caps" class="blur-up lazyload" />
+                                        <div class="ttl">
+                                            Shop  <h5>Jumpsuit</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>   
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{%include 'footer.html'%}

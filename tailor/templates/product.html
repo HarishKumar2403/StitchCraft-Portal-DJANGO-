@@ -1,0 +1,262 @@
+{% load static %}
+{%include 'header.html'%}
+{% block content %}
+<div id="page-content">
+    {% if messages %}
+                    {% for message in messages %}
+                        <center>{%if message.tags == 'success'%}
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            {{ message }} 
+                        </div>
+                        {%elif  message.tags == 'error'%}
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            {{message}}
+                        </div>
+                        {%endif%}</center>
+                    {% endfor %}
+                {% endif %}
+    <!--Collection Banner-->
+    <div class="collection-header">
+        <div class="collection-hero">
+            
+            <div class="collection-hero__image"><img class="blur-up lazyload" data-src="{%static 'assets/images/cat-women.jpg'%}" src="{%static 'assets/images/cat-women.jpg'%}" alt="Women" title="Women" /></div>
+            <div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width">Choose your style</h1></div>
+          </div>
+    </div>
+    <!--End Collection Banner-->
+    
+    <div class="container">
+        <div class="row">
+            <!--Main Content-->
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
+                <hr>
+                <div class="productList">
+                    <div class="grid-products grid--view-items">
+                        <div class="row">
+                            
+                            <!-- Blouse -->
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="{% url 'products_by_category' category='Blouse' %}">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload" data-src="/media/products/blouse.webp" src="/media/products/blouse.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload" data-src="/media/products/blouse.webp" src="/media/products/blouse.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        
+                                    </a>                                                     
+                                    <!-- end product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
+                                    </form>
+                                </div>
+                                <!-- end product image -->
+                            </div>
+                            <!-- End Blouse -->
+
+                            <!-- Kurti -->
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="{% url 'products_by_category' category='Kurta-Kurti' %}">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload" data-src="/media/products/kurti.webp" src="/media/products/kurti.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload" data-src="/media/products/kurti.webp" src="/media/products/kurti.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        
+                                    </a>                                                     
+                                    <!-- end product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
+                                    </form>
+                                </div>
+                                <!-- end product image -->
+                            </div>
+                            <!-- End Kurti -->
+
+                             <!-- Salwar Kameez -->
+                             <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="{% url 'products_by_category' category='Salwar-Suit' %}">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload" data-src="/media/products/salwar-kameez.webp" src="/media/products/salwar-kameez.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload" data-src="/media/products/salwar-kameez.webp" src="/media/products/salwar-kameez.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        
+                                    </a>                                                     
+                                    <!-- end product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
+                                    </form>
+                                </div>
+                                <!-- end product image -->
+
+                          
+                            </div>
+                            <!-- End Salwar Kameez -->
+
+                            <!-- Lehenga -->
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="{% url 'products_by_category' category='Lehenga' %}">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload" data-src="/media/products/lehenga.webp" src="/media/products/lehenga.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload" data-src="/media/products/lehenga.webp" src="/media/products/lehenga.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        
+                                    </a>                                                     
+                                    <!-- end product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
+                                    </form>
+                                </div>
+                                <!-- end product image -->
+
+                          
+                            </div>
+                            <!-- End Lehenga -->
+
+                            <!-- Dress -->
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="{% url 'products_by_category' category='Dress' %}">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload" data-src="/media/products/dress.webp" src="/media/products/dress.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload" data-src="/media/products/dress.webp" src="/media/products/dress.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        
+                                    </a>                                                     
+                                    <!-- end product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
+                                    </form>
+                                </div>
+                                <!-- end product image -->
+
+                          
+                            </div>
+                            <!-- End Dress -->
+
+                            <!-- Ready to wear -->
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="{% url 'products_by_category' category='Ready-To-wear-Saree' %}">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload" data-src="/media/products/ready-to-wear-saree.webp" src="/media/products/ready-to-wear-saree.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload" data-src="/media/products/ready-to-wear-saree.webp" src="/media/products/ready-to-wear-saree.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        
+                                    </a>                                                     
+                                    <!-- end product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
+                                    </form>
+                                </div>
+                                <!-- end product image -->
+
+                          
+                            </div>
+                            <!-- End Read to wear -->
+
+                             <!-- Shirt -->
+                             <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="{% url 'products_by_category' category='Shirt' %}">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload" data-src="/media/products/shirt.webp" src="/media/products/shirt.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload" data-src="/media/products/shirt.webp" src="/media/products/shirt.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        
+                                    </a>                                                     
+                                    <!-- end product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
+                                    </form>
+                                </div>
+                                <!-- end product image -->
+
+                          
+                            </div>
+                            <!-- End Shirt -->
+
+                            <!-- Jumpsuit -->
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <a href="{% url 'products_by_category' category='Jumpsuit' %}">
+                                        <!-- image -->
+                                        <img class="primary blur-up lazyload" data-src="/media/products/jumpsuit.webp" src="/media/products/jumpsuit.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        <!-- End image -->
+                                        <!-- Hover image -->
+                                        <img class="hover blur-up lazyload" data-src="/media/products/jumpsuit.webp" src="/media/products/jumpsuit.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                        
+                                    </a>                                                     
+                                    <!-- end product button -->
+                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
+                                    </form>
+                                </div>
+                                <!-- end product image -->
+
+                          
+                            </div>
+                            <!-- End Jumpsuit -->
+
+                                <!-- Jacket -->
+                                <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                    <!-- start product image -->
+                                    <div class="product-image">
+                                        <!-- start product image -->
+                                        <a href="{% url 'products_by_category' category='Jacket' %}">
+                                            <!-- image -->
+                                            <img class="primary blur-up lazyload" data-src="/media/products/jacket.webp" src="/media/products/jacket.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                            <!-- End image -->
+                                            <!-- Hover image -->
+                                            <img class="hover blur-up lazyload" data-src="/media/products/jacket.webp" src="/media/products/jacket.webp" alt="{{i.ProductName}}" title="{{i.ProductName}}">
+                                            
+                                        </a>                                                     
+                                        <!-- end product button -->
+                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
+                                            <button class="btn btn-addto-cart" type="button">Select Options</button>
+                                        </form>
+                                    </div>
+                                    <!-- end product image -->
+    
+                              
+                                </div>
+                                <!-- End Jacket -->
+                        
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Main Content-->
+        </div>
+    </div>
+    
+</div>
+{%endblock%}
+{%include 'footer.html'%}

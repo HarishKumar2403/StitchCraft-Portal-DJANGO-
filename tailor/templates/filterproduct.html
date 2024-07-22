@@ -1,0 +1,60 @@
+{% load static %}
+{%include 'header.html'%}
+{% block content %}
+
+<div id="page-content">
+    
+    
+      <!--Feature Content-->
+    <div class="section feature-content">
+        <div class="container">
+            <div class="row">
+                {% for index, product in products_with_index %}
+                 {% if index|divisibleby:2 %}
+ 
+                    <div class="feature-row">
+                    <div class="col-12 col-sm-12 col-md-6 feature-row__item text-center">
+                        <img class="blur-up lazyload" data-src="/media/{{product.img1}}" src="/media/{{product.img1}}" alt="{{product.ProductName}}" title="{{product.ProductName}}" />
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--left text-left">
+                        <div class="row-text">
+                            <h2 class="h2">{{ product.ProductName }}  </h2>
+                            <p style="font-size: larger;">{{ product.ProductDetails }}</p>
+                            <a href="{%url 'add_to_cart' product_id=product.id %}" class="btn">SHOP</a>
+                        </div>
+                    </div>
+                    </div>
+                 {% else %}
+                 <div class="section feature-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="feature-row">
+                                <div class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--right text-right">
+                                    <div class="row-text">
+                                        <h2 class="h2" style="text-align: left;padding-left: 80px;">{{product.ProductName}} </h2>
+                                        <p style="text-align: left;padding-left: 80px;font-size: larger;">{{product.ProductDetails}}</p>
+                                        <a href="{%url 'add_to_cart' product_id=product.id %}" class="btn">Shop Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 feature-row__item text-center">
+                                    <img class="blur-up lazyload" data-src="/media/{{product.img1}}" src="/media/{{product.img1}}" alt="{{product.ProductName}}" title="{{product.ProductName}}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!--Feature Content-->
+    
+    <!--Feature Content-->
+    
+    <!--Feature Content-->
+    
+</div>
+
+{%endblock%}
+{%include 'footer.html'%}

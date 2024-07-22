@@ -1,0 +1,184 @@
+{% load static %}
+{%include 'header.html'%}
+{% block content %}
+
+    <div id="page-content">
+    	<!--Page Title-->
+    	<div class="page section-header text-center">
+			<div class="page-title">
+                {% if messages %}
+                    {% for message in messages %}
+                        {%if message.tags == 'success'%}
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            {{ message }} 
+                        </div>
+                        {%elif  message.tags == 'error'%}
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            {{message}}
+                        </div>
+                        {%endif%}
+                    {% endfor %}
+                {% endif %}
+
+        		<div class="wrapper">
+                    <h1 class="page-width">Fill the size chart depends upon your material</h1>
+                    <h3>Measurement should be included with units(inch/cm) any dout in  measurement refer the size chart</h3>
+                    <h3>If you have any doubt please contact us</h3>
+                    <a href="#sizechart" class="sizelink btn"> Size Guide</a>
+                </div>
+      		</div>
+		</div>
+        <!--End Page Title-->        
+        <div class="container">
+        	<div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
+                	<div class="mb-4">
+                        <form action="#" method="POST" class="contact-form">
+                            {%csrf_token%}
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="fabric">Fabric</label>
+                                    <input type="text" name="fabric" id="Fabric" required>                  
+                                </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="colour">Colour</label>
+                                          
+                                        <input type="text" name="colour" id="colour">             
+                                    </div>
+                                </div>
+                                <label>
+                                     
+                                </label>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="neck">Neck</label>
+                                        <input type="text" name="neck" id="neck" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="overbust">Over Bust</label>
+                                        <input type="text" name="overbust" id="overbust" >                  
+                                    </div>
+                                </div>            
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="bust">Bust</label>
+                                        <input type="text" name="bust" id="bust" >                  
+                                    </div>
+                                </div>    
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="waist">Waist</label>
+                                        <input type="text" name="waist" id="waist" >                  
+                                    </div>
+                                </div>  
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="hips">Hips</label>
+                                        <input type="text" name="hips" id="hips" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="neckToHeel">Neck to Heel</label>
+                                        <input type="text" name="neckToHeel" id="neckToHeel" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="neckToAboveKnee">Neck To Above Knee</label>
+                                        <input type="text" name="neckToAboveKnee" id="neckToAboveKnee" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="aboveKneeToAnkle">Above Knee To Ankle</label>
+                                        <input type="text" name="aboveKneeToAnkle" id="aboveKneeToAnkle" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="armLength">Arm Length</label>
+                                        <input type="text" name="armLength" id="armLength" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="shoulderSeam">Shoulder Seam</label>
+                                        <input type="text" name="shoulderSeam" id="shoulderSeam" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="armHole">Arm Hole</label>
+                                        <input type="text" name="armHole" id="armHole" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="bicep">Bicep</label>
+                                        <input type="text" name="bicep" id="bicep" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="foreArm">Fore Arm</label>
+                                        <input type="text" name="foreArm" id="foreArm" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="wrist">Wrist</label>
+                                        <input type="text" name="wrist" id="wrist" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="vNeckCut">V Neck Cut</label>
+                                        <input type="text" name="vNeckCut" id="vNeckCut" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="shoulderToWaist">Shoulder To Waist</label>
+                                        <input type="text" name="shoulderToWaist" id="shoulderToWaist" >                  
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="waistToAboveKnee">Waist To Above Knee</label>
+                                        <input type="text" name="waistToAboveKnee" id="waistToAboveKnee" >                  
+                                    </div>
+                                </div> 
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label for="productdescription">Enter How do you want to customize your product...</label>
+                                        <textarea type="text" rows="5" name="productdescription" id="productdescription" ></textarea>                 
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="row">
+                                    <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <input type="submit" class="btn mb-3" value="submit">
+                                        
+                                    </div>
+                                 </div>            
+                           
+                        </form>
+                    </div>
+               	</div>
+            </div>
+        </div>        
+    </div>
+    
+{%endblock%}
+{%include 'footer.html'%}
+    <!--End Body Content-->
+    
+    
